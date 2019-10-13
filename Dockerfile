@@ -1,6 +1,10 @@
 FROM alpine:3.5
 
+ENV http_proxy http://10.27.1.201:8080
+ENV https_proxy http://10.27.1.201:8080
+
 RUN apk add --update nodejs
+RUN apk add python python-dev py2-pip autoconf automake g++ make --no-cache
 
 WORKDIR /var/openKB
 
